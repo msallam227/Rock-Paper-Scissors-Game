@@ -9,6 +9,23 @@
 
 </header>
 <body>
+    <div id="wrapper">
+        <img src="Images/109-1094415_cartoon-rock-paper-scissors-clipart.png">
+
+        <div id="gameinterface">
+
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
     <script type="text/javascript">
     // The user can choose from 'r', 'p', 's'
     // Computer has to choose from 'r', 'p', 's' at random. 
@@ -20,12 +37,17 @@
 
 
     // User can choose from 'r', 'p', 's' and computer chooses at random. 
-    var userChoice = prompt("Pick r, p, s");
-    var Choices = ['r', 'p', 's'];
-    var ComputerChoices = Choices[Math.floor(Math.random() * Choices.length)];
-    console.log(ComputerChoices);
+   
+   // THIS IS WHERE CODE STARTS 
+   
+    //var userChoice = prompt("Pick r, p, s");
+    //var Choices = ['r', 'p', 's'];
+   // var ComputerChoices = Choices[Math.floor(Math.random() * Choices.length)];
+    //console.log(ComputerChoices);
 
-    
+    // THIS IS WHERE CODE ENDS 
+
+
     // If user picks rock and if computer picks scissors then user wins.
     //If user picks rock and if computer picks paper then user loses.
     //If user picks scissors and if computer picks rock then user loses.
@@ -34,25 +56,27 @@
     //If user picks paper and if computer picks scissors then user loses.
     //If user picks the same as computer then they tie.
 
-   if(userChoice === 'r' && ComputerChoices === 's'){
-       console.log("User Wins");
-   }else if (userChoice === 'r' && ComputerChoices === 'p'){
-       console.log("User Loses");
-   }else if (userChoice === 's' && ComputerChoices === 'r'){
-       console.log("User Loses"); 
-   }else if (userChoice === 's' && ComputerChoices === 'p'){
-       console.log("User Wins"); 
-   }else if(userChoice === 'p' && ComputerChoices === 'r'){
-       console.log("User Wins!");
-   }else if(userChoice === 'p' && ComputerChoices === 's'){
-       console.log("User Loses!");
-   }else if (userChoice === ComputerChoices){
-       console.log("User Ties with Computer!");
-   }else{
-       console.log("Not sure but the grass is green today.");
-   }
+        // THIS IS WHERE CODE STARTS 
 
-     
+   //if(userChoice === 'r' && ComputerChoices === 's'){
+       //console.log("User Wins");
+  // }else if (userChoice === 'r' && ComputerChoices === 'p'){
+       //console.log("User Loses");
+  // }else if (userChoice === 's' && ComputerChoices === 'r'){
+      // console.log("User Loses"); 
+  // }else if (userChoice === 's' && ComputerChoices === 'p'){
+       //console.log("User Wins"); 
+   //}else if(userChoice === 'p' && ComputerChoices === 'r'){
+       //console.log("User Wins!");
+  // }else if(userChoice === 'p' && ComputerChoices === 's'){
+       //console.log("User Loses!");
+  // }else if (userChoice === ComputerChoices){
+       //console.log("User Ties with Computer!");
+  // }else{
+     //  console.log("Not sure but the grass is green today.");
+  // }
+
+     // THIS IS WHERE CODE ENDS
 
 </script>
 </body>

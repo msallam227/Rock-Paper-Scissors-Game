@@ -1,0 +1,13 @@
+body{
+    background-color: deepskyblue;
+}
+
+#gameinterface{
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: 533px;
+    width: 357px;
+    position: absolute;
+    left: 898px;
+    top: 20px;
+}
