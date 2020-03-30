@@ -4,6 +4,11 @@ body{
 
 #gameinterface{
     background-color: #ffffff;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px; 
+    font-weight: 600; 
+    padding: 20px; 
     border-radius: 30px;
     height: 533px;
     width: 357px;
@@ -21,11 +26,3 @@ body{
     top: 20px; 
 }
 
-#userChoice{
-    position: absolute;
-    top: 90px;
-    right: 216px;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: courier;
-}
