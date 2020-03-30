@@ -13,8 +13,9 @@
         <img src="Images/109-1094415_cartoon-rock-paper-scissors-clipart.png">
 
         <div id="gameinterface">
+            <p id="directions">Type a letter: 'r', 'p', or 's'</p>
 
-            
+
         </div>
     </div>
 
@@ -38,14 +39,14 @@
 
     // User can choose from 'r', 'p', 's' and computer chooses at random. 
    
-   // THIS IS WHERE CODE STARTS 
    
-    //var userChoice = prompt("Pick r, p, s");
-    //var Choices = ['r', 'p', 's'];
-   // var ComputerChoices = Choices[Math.floor(Math.random() * Choices.length)];
-    //console.log(ComputerChoices);
+   
+    var userChoice = prompt("Pick r, p, s");
+    var Choices = ['r', 'p', 's'];
+    var ComputerChoices = Choices[Math.floor(Math.random() * Choices.length)];
+    console.log(ComputerChoices);
 
-    // THIS IS WHERE CODE ENDS 
+    
 
 
     // If user picks rock and if computer picks scissors then user wins.
@@ -56,27 +57,27 @@
     //If user picks paper and if computer picks scissors then user loses.
     //If user picks the same as computer then they tie.
 
-        // THIS IS WHERE CODE STARTS 
+     
 
-   //if(userChoice === 'r' && ComputerChoices === 's'){
-       //console.log("User Wins");
-  // }else if (userChoice === 'r' && ComputerChoices === 'p'){
-       //console.log("User Loses");
-  // }else if (userChoice === 's' && ComputerChoices === 'r'){
-      // console.log("User Loses"); 
-  // }else if (userChoice === 's' && ComputerChoices === 'p'){
-       //console.log("User Wins"); 
-   //}else if(userChoice === 'p' && ComputerChoices === 'r'){
-       //console.log("User Wins!");
-  // }else if(userChoice === 'p' && ComputerChoices === 's'){
-       //console.log("User Loses!");
-  // }else if (userChoice === ComputerChoices){
-       //console.log("User Ties with Computer!");
-  // }else{
-     //  console.log("Not sure but the grass is green today.");
-  // }
+   if(userChoice === 'r' && ComputerChoices === 's'){
+       console.log("User Wins");
+  }else if (userChoice === 'r' && ComputerChoices === 'p'){
+       console.log("User Loses");
+   }else if (userChoice === 's' && ComputerChoices === 'r'){
+       console.log("User Loses"); 
+   }else if (userChoice === 's' && ComputerChoices === 'p'){
+       console.log("User Wins"); 
+   }else if(userChoice === 'p' && ComputerChoices === 'r'){
+       console.log("User Wins!");
+   }else if(userChoice === 'p' && ComputerChoices === 's'){
+       console.log("User Loses!");
+   }else if (userChoice === ComputerChoices){
+       console.log("User Ties with Computer!");
+   }else{
+      console.log("Not sure but the grass is green today.");
+   }
 
-     // THIS IS WHERE CODE ENDS
+    
 
 </script>
 </body>
