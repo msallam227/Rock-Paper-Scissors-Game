@@ -14,6 +14,11 @@
 
         <div id="gameinterface">
             <p id="directions">Type a letter: 'r', 'p', or 's'</p>
+            <p id="userChoice"></p>
+            <p id="computerChoice"></p>
+            <p id="wins"></p>
+            <p id="loses"></p>
+            <p id ="ties"></p>
 
 
         </div>
@@ -28,57 +33,45 @@
 
 
     <script type="text/javascript">
-    // The user can choose from 'r', 'p', 's'
-    // Computer has to choose from 'r', 'p', 's' at random. 
-    // User types something and its stored into a variable. 
-    // compare variable to computer choice. 
-    // if / else options 
-    // if the computer wins then document.write you win. 
-    // else document.write User wins 
-
-
-    // User can choose from 'r', 'p', 's' and computer chooses at random. 
-   
-   
-   
-    var userChoice = prompt("Pick r, p, s");
-    var Choices = ['r', 'p', 's'];
-    var ComputerChoices = Choices[Math.floor(Math.random() * Choices.length)];
-    console.log(ComputerChoices);
-
-    
-
-
-    // If user picks rock and if computer picks scissors then user wins.
-    //If user picks rock and if computer picks paper then user loses.
-    //If user picks scissors and if computer picks rock then user loses.
-    // If user picks scissors and if computer picks paper then user wins.
-    //If user picks paper and if computer picks rock then user wins.
-    //If user picks paper and if computer picks scissors then user loses.
-    //If user picks the same as computer then they tie.
-
      
+   // Create an array that holds all the computer choices in it 
+   var Choices = ['r', 'p', 's'];
 
-   if(userChoice === 'r' && ComputerChoices === 's'){
-       console.log("User Wins");
-  }else if (userChoice === 'r' && ComputerChoices === 'p'){
-       console.log("User Loses");
-   }else if (userChoice === 's' && ComputerChoices === 'r'){
-       console.log("User Loses"); 
-   }else if (userChoice === 's' && ComputerChoices === 'p'){
-       console.log("User Wins"); 
-   }else if(userChoice === 'p' && ComputerChoices === 'r'){
-       console.log("User Wins!");
-   }else if(userChoice === 'p' && ComputerChoices === 's'){
-       console.log("User Loses!");
-   }else if (userChoice === ComputerChoices){
-       console.log("User Ties with Computer!");
-   }else{
-      console.log("Not sure but the grass is green today.");
-   }
+   // Create variables that hold the wins, loses or ties. This is going to be a counter. 
+   var wins = 0; 
+   var loses = 0; 
+   var ties = 0; 
 
+    // Create variables that hold references to the places in the HTML where we want to display things.
+     var directionsText = document.getElementById("directions");
+     var UserChoiceText = document.getElementById("userChoice");
+     var computerChoiceText = document.getElementById("computerChoice");
+     var winsText = document.getElementById("wins");
+     var losesText = document.getElementById("loses");
+     var tiesText = document.getElementById("ties")
+
+     // User preses the key 
+     document.onkeyup = function(event){
+         var userGuess = event.key;
+         var computerGuess = Choices[Math.floor(Math.random() * Choices.length)];
     
+     // Only run the following code block if the user presses "r" or "p" or "s".
+     if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
 
+    // Hide the directions
+    directionsText.textContent = "";
+
+    // Display the user and computer guesses, and wins/losses/ties.
+    UserChoiceText.textContent = "You chose: " + userGuess;
+    computerChoiceText.textContent = "The computer chose: " + computerGuess;
+    winsText.textContent = "wins: " + wins;
+    losesText.textContent = "losses: " + loses;
+    tiesText.textContent = "ties: " + ties;
+    }
+};
+   
+   
+    
 </script>
 </body>
 </html>
